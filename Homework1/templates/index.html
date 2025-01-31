@@ -1,0 +1,35 @@
+<body>
+    <h1>Loan Application System</h1>
+
+    <!-- New Application Section -->
+    <div id="newApplication">
+        <h2>New Application</h2>
+        <input type="text" id="name" placeholder="Name">
+        <input type="text" id="zipcode" placeholder="Zipcode">
+        <button onclick="submitApplication()">Submit</button>
+        <div id="applicationResult"></div>
+    </div>
+
+    <!-- Check Status Section -->
+    <div id="checkStatus">
+        <h2>Check Application Status</h2>
+        <input type="text" id="checkAppNumber" placeholder="Application Number">
+        <button onclick="checkStatus()">Check</button>
+        <div id="statusResult"></div>
+    </div>
+
+    <!-- Update Status Section -->
+    <div id="updateStatus">
+        <h2>Update Status</h2>
+        <input type="text" id="updateAppNumber" placeholder="Application Number">
+        <select id="newStatus">
+            <option value="processing">Processing</option>
+            <option value="accepted">Accepted</option>
+            <option value="rejected">Rejected</option>
+        </select>
+        <button onclick="updateStatus()">Update</button>
+        <div id="updateResult"></div>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
