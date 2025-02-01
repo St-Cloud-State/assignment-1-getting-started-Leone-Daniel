@@ -67,4 +67,4 @@ function updateStatus() {
     .catch(error => {
         console.error('Error:', error);
     });
-}
+} 
